@@ -1,0 +1,11 @@
+def information_data(data):
+    display('Первые десять строк датафрейма:')
+    display(data.head(10))
+    display('Общая информация о датафрейме:')
+    display(data.info())
+    display('Описание данных:')
+    display(data.describe())
+    display('Количество пропусков:')
+    display(data.isna().sum())
+    display('Количество дубликатов:')
+    display(data.duplicated().sum())
