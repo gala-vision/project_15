@@ -9,3 +9,9 @@ def information_data(data):
     display(data.isna().sum())
     print('Количество дубликатов:')
     display(data.duplicated().sum())
+    
+def aggregate_expert_ratings(row):
+    ratings = [row['expert_1'], row['expert_2'], row['expert_3']]
+    if len(set(ratings)) == 3:  # Если все три разные, считаем их противоречивыми и отбрасываем
+        return None
+    return sorted(ratings)[1]  # Медиана большинства
