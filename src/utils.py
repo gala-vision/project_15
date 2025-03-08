@@ -1,3 +1,4 @@
+# функция для вывода основной информации о датафрейме
 def information_data(data):
     print('Первые десять строк датафрейма:')
     display(data.head(10))
@@ -9,7 +10,8 @@ def information_data(data):
     display(data.isna().sum())
     print('Количество дубликатов:')
     display(data.duplicated().sum())
-    
+
+# функция для рассчета агрегированной оценки экспертов    
 def aggregate_expert_ratings(row):
     ratings = [row['expert_1'], row['expert_2'], row['expert_3']]
     if len(set(ratings)) == 3:  # Если все три разные, считаем их противоречивыми и отбрасываем
