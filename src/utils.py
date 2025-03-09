@@ -1,3 +1,12 @@
+import torch
+import torchvision.transforms as transforms
+import torchvision.models as models
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+from transformers import BertTokenizer, BertModel
+
+
 # функция для вывода основной информации о датафрейме
 def information_data(data):
     print('Первые десять строк датафрейма:')
